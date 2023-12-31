@@ -1,0 +1,130 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.cabecalho__container {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho__titulo {
+    padding-left: .4em;
+    font-size: 1.1rem;
+    color: var(--color-logo);
+}
+
+.cabecalho__navegacao {
+    margin: 0 auto 0 8em;
+}
+
+.cabecalho__navegacao__links {
+    text-decoration: none;
+    padding: 0 1em;
+    color: var(--color-text)
+}
+
+.botao__entrar,
+.botao__cadastrar {
+    margin-left: 2em;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.botao__cadastrar {
+    padding: 1em;
+    background-color: var(--color-emphasis);
+    border-radius: 8px;
+    color: var(--color-background);
+}
+
+.cabecalho__menu {
+    display: none;
+}
+
+@media screen and (max-width: 1170px) {
+    .cabecalho__navegacao {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .cabecalho__navegacao {
+        display: none;
+    }
+
+    .cabecalho__mobile {
+        padding: 0;
+    }
+
+    .cabecalho__menu {
+        display: block;
+        background-image: url('../assets/hamburger-menu.svg');
+        width: 44px;
+        height: 44px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 1em;
+        position: relative;
+    }
+
+    .menu__botao {
+        display: none;
+    }
+
+    .menu__lista {
+        display: none;
+        position: absolute;
+        top: 110%;
+        width: 25vw;
+    }
+    
+    .menu__botao:checked~.menu__lista {
+        display: block;
+    }
+
+    .lista__itens {
+        padding: .8em 2em;
+        background-color: var(--color-emphasis);
+
+    }
+
+    .cabecalho__navegacao__links {
+        padding: 0;
+        color: var(--color-background);
+    }
+
+    .botao__segundario {
+        display: none;
+    }
+
+    .botao__entrar {
+        padding: 1em;
+        border: 1px solid var(--color-text);
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .cabecalho {
+        padding: 1em;
+    }
+
+    .cabecalho__mobile {
+        padding: 0 .2em 0 0; 
+    }
+
+    .cabecalho__menu {
+        margin-right: .5em;
+    }
+
+    .lista__itens {
+        width: 25vw;
+    }
+
+    .botao__entrar {
+        margin-left: 0em;
+    }
+}
